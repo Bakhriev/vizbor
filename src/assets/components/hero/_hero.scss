@@ -1,41 +1,69 @@
 .hero {
 	@media screen and (max-width: 992px) {
 	}
+	&__img-1 {
+		position: absolute;
+		top: 10px;
+		left: -70px;
+		width: 1330px;
+		height: calc(100% + 250px);
+		@media screen and (max-width: 992px) {
+			width: 550px;
+			left: auto;
+			right: 0;
+			height: 100%;
+		}
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+	&__img-2 {
+		position: absolute;
+		z-index: 1;
+		top: 25px;
+		left: 80px;
+		width: 1330px;
+		height: calc(100% + 250px);
+		@media screen and (max-width: 992px) {
+			width: 550px;
+			left: auto;
+			right: 0;
+			height: 100%;
+		}
+		@media screen and (max-width: 768px) {
+			position: relative;
+			left: auto;
+			top: auto;
+			width: 100%;
+			height: auto;
+		}
+	}
 	&__container {
 		position: relative;
-		min-height: 834px;
-
-		&::after {
-			content: '';
-			position: absolute;
-			top: 10px;
-			left: -70px;
-			width: 1330px;
-			height: 1036px;
-			background: url('../img/hero-bg-copy.png') no-repeat center;
-			background-size: 1330px 1036px;
+		min-height: 840px;
+		@media screen and (max-width: 992px) {
+			min-height: 100px;
 		}
-		&::before {
-			content: '';
-			position: absolute;
-			z-index: 1;
-			top: 50px;
-			left: 80px;
-			width: 1330px;
-			height: 1036px;
-			background: url('../img/hero-bg.png') no-repeat center;
-			background-size: 1330px 1056px;
+		@media screen and (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+			align-items: flex-start;
 		}
 	}
 
 	&__content {
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		padding-top: 190px;
 		padding-left: 140px;
 		@media screen and (max-width: 992px) {
+			padding-left: 50px;
+			padding-top: 60px;
+		}
+		@media screen and (max-width: 400px) {
 			padding-left: 0;
-			padding-top: 30px;
+			padding-top: 20px;
 		}
 	}
 
@@ -61,7 +89,7 @@
 		letter-spacing: 0.02em;
 		color: var(--primary);
 		@media screen and (max-width: 992px) {
-			font-size: 40px;
+			font-size: 37px;
 		}
 	}
 
@@ -70,6 +98,15 @@
 		z-index: 2;
 		left: 30px;
 		bottom: 25px;
+		@media screen and (max-width: 992px) {
+			width: 15px;
+			position: relative;
+			left: 0;
+			margin-top: 30px;
+		}
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 }
 .container {
