@@ -1,0 +1,49 @@
+.footer {
+	&__title {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 20px;
+		color: var(--primary);
+	}
+
+	&__mail {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 30px;
+		color: var(--primary);
+		text-decoration: none;
+		transition: opacity 150ms ease-in-out;
+		@include hover {
+			opacity: 0.7;
+		}
+		@media screen and (max-width: 768px) {
+			font-size: 22px;
+		}
+	}
+
+	&__copy {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 16px;
+		color: #6c6c6c;
+	}
+}
+.footer-top {
+	padding: 35px 0;
+	background: #e7e7e7;
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 108px;
+		@media screen and (max-width: 768px) {
+			gap: 20px;
+		}
+	}
+}
+
+.footer-bottom {
+	padding: 35px 0;
+	&__container {
+	}
+}

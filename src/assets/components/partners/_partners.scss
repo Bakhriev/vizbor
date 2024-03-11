@@ -1,0 +1,30 @@
+.partners {
+	padding-top: 68px;
+	padding-bottom: 60px;
+	&__container {
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 20px;
+		color: var(--primary);
+	}
+
+	&__items {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		gap: 20px;
+		@media screen and (max-width: 992px) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			place-items: center;
+		}
+	}
+
+	&__img {
+	}
+}
