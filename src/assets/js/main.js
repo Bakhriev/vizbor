@@ -40,3 +40,14 @@ navLinks.forEach(link => {
 const removeCurrentLinks = () => {
 	navLinks.forEach(link => link.classList.remove('menu__link_current'));
 };
+
+const video = document.querySelector('.film__video');
+const videoPlayBtn = document.querySelector('.film__btn');
+
+const toggleVideo = () => {
+	video.play();
+	video.controls = true;
+	videoPlayBtn.style.display = 'none';
+};
+
+videoPlayBtn.addEventListener('click', toggleVideo);
