@@ -6,7 +6,30 @@
 	padding-bottom: 132px;
 	@media screen and (max-width: 992px) {
 		padding-top: 60px;
-		padding-bottom: 60px;
+		padding-bottom: 270px;
+	}
+	@media screen and (max-width: 768px) {
+		padding-bottom: 180px;
+	}
+
+	&::before {
+		content: '“';
+		position: absolute;
+		z-index: 1;
+		bottom: -60px;
+		left: 0;
+		width: 350px;
+		height: 322px;
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 700px;
+		color: #fff;
+		line-height: 1;
+		@media screen and (max-width: 768px) {
+			width: 200px;
+			font-size: 500px;
+			bottom: -140px;
+		}
 	}
 
 	&__container {
@@ -50,6 +73,4 @@
 			font-size: 18px;
 		}
 	}
-}
-.container {
 }

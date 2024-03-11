@@ -1,0 +1,129 @@
+.news {
+	padding-top: 136px;
+	background-color: #fff;
+	@media screen and (max-width: 992px) {
+		padding-top: 60px;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 56px;
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 100px 1fr;
+		gap: 121px;
+		@media screen and (max-width: 1200px) {
+			gap: 50px;
+		}
+		@media screen and (max-width: 992px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__title {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 20px;
+		color: var(--primary);
+		@media screen and (max-width: 992px) {
+			font-size: 32px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	&__btn {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 16px;
+		color: #6c6c6c;
+		border: 1px solid var(--black);
+		border-radius: 90px;
+		width: 197px;
+		height: 40px;
+		padding: 10px 23px;
+		margin: 0 auto;
+		transition:
+			background-color 150ms ease-in-out,
+			color 150ms ease-in-out;
+		@include hover {
+			background-color: #222;
+			color: #fff;
+		}
+		&:active {
+			scale: 0.97;
+		}
+	}
+}
+
+.news-card {
+	display: flex;
+	@media screen and (max-width: 700px) {
+		flex-direction: column;
+	}
+
+	&_reverse {
+		.news-card__img-wrapper {
+			order: 1;
+		}
+	}
+
+	&__img-wrapper {
+		min-width: 300px;
+		@media screen and (max-width: 700px) {
+			min-width: 150px;
+		}
+	}
+
+	&__img {
+		height: 100%;
+		object-fit: cover;
+		width: 100%;
+		background-color: #222;
+	}
+
+	&__content {
+		background: #e7e7e7;
+		padding: 38px 60px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		@media screen and (max-width: 768px) {
+			padding: 15px;
+			gap: 20px;
+		}
+	}
+
+	&__data {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 16px;
+		color: #6c6c6c;
+		display: flex;
+		flex-direction: column;
+		span {
+			font-weight: 500;
+		}
+	}
+
+	&__title {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 24px;
+		color: #6c6c6c;
+		display: flex;
+		flex-direction: column;
+		@media screen and (max-width: 700px) {
+			font-size: 20px;
+		}
+		span {
+			font-weight: 500;
+			font-size: 14px;
+		}
+	}
+}
