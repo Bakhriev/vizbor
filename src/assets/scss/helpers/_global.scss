@@ -1,0 +1,123 @@
+body {
+	font-family: var(--ff-primary);
+	font-size: 16px;
+	font-weight: 400;
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wrapper {
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100vh;
+}
+
+.main {
+	flex: 1;
+}
+
+.container {
+	--container-padding: 20px;
+	--container-width: 1160px;
+
+	margin-inline: auto;
+
+	max-width: calc(var(--container-width) + var(--container-padding));
+	padding-inline: var(--container-padding);
+}
+
+.disable-scroll {
+	overflow: hidden !important;
+}
+
+.btn-reset {
+	border: none;
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// Border on hover
+.border-bottom-line {
+	position: relative;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		bottom: -6px;
+		left: 0;
+
+		width: 100%;
+		height: 1px;
+
+		background-color: #000;
+
+		border-radius: 5px;
+		transform: scaleX(0);
+
+		// transform-origin: right bottom;
+		transform-origin: center;
+		transition: transform 250ms ease-in-out;
+	}
+
+	@include hover {
+		&::before {
+			transform: scaleX(1);
+
+			// transform-origin: left bottom;
+		}
+	}
+}
+
+.visually-hidden {
+	position: absolute !important;
+	overflow: hidden !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	white-space: nowrap !important;
+	clip: rect(0, 0, 0, 0) !important;
+}
+
+.ripple-effect {
+	position: relative;
+	overflow: hidden;
+
+	&__circle {
+		position: absolute;
+		z-index: 0;
+		border-radius: 50%;
+		background-color: var(--nobel);
+		animation: ripple 0.8s linear;
+		pointer-events: none;
+		translate: -50% -50%;
+	}
+}
+
+@keyframes ripple {
+	from {
+		width: 0;
+		height: 0;
+		opacity: 0.5;
+	}
+
+	to {
+		width: 400px;
+		height: 400px;
+		opacity: 0;
+	}
+}
